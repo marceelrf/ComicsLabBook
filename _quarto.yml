@@ -1,0 +1,42 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Comics Lab Book"
+  author: "Marcel Ferreira"
+  date: today
+  
+  
+  page-footer:
+    left: |
+      This book is Comics Lab initiative.
+    right: |
+      This website was built with <a href="https://quarto.org/">Quarto</a>.
+  
+  chapters:
+    - index.qmd
+    - intro.qmd
+    
+    - part: sequencing_intro.qmd
+      chapters:
+      - nanopore.qmd
+    
+    - part: rpackages_intro.qmd
+    
+    - part: ml_intro.qmd
+
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: simplex
+    code-link: true
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

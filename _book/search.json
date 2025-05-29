@@ -1,0 +1,83 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Comics Lab Book",
+    "section": "",
+    "text": "About this book",
+    "crumbs": [
+      "About this book"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "\n1  Introduction\n",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "\n3  Summary\n",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "sequencing_intro.html",
+    "href": "sequencing_intro.html",
+    "title": "Sequencing",
+    "section": "",
+    "text": "This page is under construction",
+    "crumbs": [
+      "Sequencing"
+    ]
+  },
+  {
+    "objectID": "rpackages_intro.html",
+    "href": "rpackages_intro.html",
+    "title": "R packages",
+    "section": "",
+    "text": "This page is under construction",
+    "crumbs": [
+      "R packages"
+    ]
+  },
+  {
+    "objectID": "ml_intro.html",
+    "href": "ml_intro.html",
+    "title": "Machine Learing",
+    "section": "",
+    "text": "This page is under construction",
+    "crumbs": [
+      "Machine Learing"
+    ]
+  },
+  {
+    "objectID": "nanopore.html",
+    "href": "nanopore.html",
+    "title": "2  Nanopore sequencing",
+    "section": "",
+    "text": "2.1 This page is under construction",
+    "crumbs": [
+      "Sequencing",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Nanopore sequencing</span>"
+    ]
+  }
+]
