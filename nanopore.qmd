@@ -1,3 +1,8 @@
+---
+date: today
+author: Marcel Ferreira
+---
+
 # Nanopore sequencing {#sec-nanoseq}
 
 ## This page is under construction
