@@ -2,15 +2,16 @@ project:
   type: book
   output-dir: _book
 
+
 book:
-  title: "Comics Lab Book"
+  title: "Material Book"
   author: "Marcel Ferreira"
   date: today
   
   
   page-footer:
     left: |
-      This book is Comics Lab initiative.
+      This book is Marcel Ferreira initiative.
     right: |
       This website was built with <a href="https://quarto.org/">Quarto</a>.
   
@@ -20,13 +21,21 @@ book:
     
     - part: sequencing_intro.qmd
       chapters:
+      - illumina.qmd
       - nanopore.qmd
+      
+    - part: rbase.qmd
     
     - part: rpackages_intro.qmd
     
+    - part: bioinformatics.qmd
+      chapters:
+      - bioinformatics_files.qmd
+    
     - part: ml_intro.qmd
+      chapters:
+      - ml_theory.qmd
 
-    - summary.qmd
     - references.qmd
 
 bibliography: references.bib
@@ -35,8 +44,8 @@ format:
   html:
     theme: simplex
     code-link: true
-  pdf:
-    documentclass: scrreprt
+
 
 editor: visual
+engine: knitr
 

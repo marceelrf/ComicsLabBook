@@ -2,41 +2,51 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Comics Lab Book",
+    "title": "Material Book",
     "section": "",
-    "text": "About this book",
+    "text": "Welcome to Course Materials\nThis online resource provides comprehensive materials for my courses, organized for easy navigation and accessibility. The content is structured to support both in-class learning and independent study.",
     "crumbs": [
-      "About this book"
+      "Welcome to Course Materials"
+    ]
+  },
+  {
+    "objectID": "index.html#about-this-book",
+    "href": "index.html#about-this-book",
+    "title": "Material Book",
+    "section": "About This Book",
+    "text": "About This Book\nThis digital compendium contains lecture notes, assignments, readings, and supplementary materials designed to enhance your learning experience. Each section builds upon previous concepts while providing standalone resources that can be referenced as needed.",
+    "crumbs": [
+      "Welcome to Course Materials"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-navigate",
+    "href": "index.html#how-to-navigate",
+    "title": "Material Book",
+    "section": "How to Navigate",
+    "text": "How to Navigate\nThe Table of Contents on the left sidebar provides quick access to all materials. Chapters are organized sequentially to follow the course progression, but each section includes cross-references to related topics throughout the book.",
+    "crumbs": [
+      "Welcome to Course Materials"
+    ]
+  },
+  {
+    "objectID": "index.html#getting-started",
+    "href": "index.html#getting-started",
+    "title": "Material Book",
+    "section": "Getting Started",
+    "text": "Getting Started\nBegin with the introductory chapters to establish foundational knowledge, then progress through the materials at your own pace. Use the search function to quickly locate specific topics or concepts.\nAll materials are regularly updated to reflect current best practices and emerging developments in the field. Please check back periodically for new content and revisions.",
+    "crumbs": [
+      "Welcome to Course Materials"
     ]
   },
   {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "\n1  Introduction\n",
+    "title": "1  Introduction",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "This section is under construction",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "\n3  Summary\n",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "References"
     ]
   },
   {
@@ -50,13 +60,154 @@
     ]
   },
   {
+    "objectID": "illumina.html",
+    "href": "illumina.html",
+    "title": "2  Illumina",
+    "section": "",
+    "text": "This section is under construction",
+    "crumbs": [
+      "Sequencing",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Illumina</span>"
+    ]
+  },
+  {
+    "objectID": "nanopore.html",
+    "href": "nanopore.html",
+    "title": "3  Nanopore sequencing",
+    "section": "",
+    "text": "3.1 Intro\nWithin the panorama of third-generation sequencing, ONT stands as a vanguard, contributing distinctive innovations to the DNA/RNA sequencing landscape. Pioneering the concept of nanopore sequencing, ONT employs biological nanopores embedded in synthetic membranes to analyze nucleic acids in real time (Jain et al. 2018; Y. Wang et al. 2021). The portable MinION device, emblematic of Oxford Nanopore’s approach, enables on-demand, long-read sequencing with unparalleled flexibility, given its small size (105 mm×23 mm x 33 mm) and weight (87 g) (Ip et al. 2015; Jain et al. 2016; Tyson et al. 2017). The nanopore-based sequencing mechanism allows for the direct, electronic detection of nucleotide sequences as they pass through the nanopore, offering advantages regarding read length and adaptability to various sample. For example, this allows the RNA strand to be sequenced directly, i.e., without synthesizing complementary DNA, making it easier to identify isoforms and determine the length of the poly-A tail (Y. Wang et al. 2021; Wan et al. 2022; Workman et al. 2019; J. Wang et al. 2024). Bypassing bias-inducing steps like polymerase chain reaction (PCR), direct sequencing provides accurate, native data on the target molecule (Y. Wang et al. 2021; Bowden et al. 2019; Delahaye and Nicolas 2021a, 2021b). Nanopore sequencing has two modes: simplex and duplex. In the simplex mode (also known as 1D), a nanopore sequences only one DNA strand. In the duplex mode, both strands of DNA are sequenced (one immediately after the other), resulting in a twofold sequencing procedure that facilitates base correction (Y. Wang et al. 2021; Lin, Hui, and Mao 2021).\nNanopore sequencing employs specialized flow cells tailored to distinct devices, each with unique capacities. The Flongle Flow Cell (R9.4.1) has 126 channels, interfaces with Flongle, MinION, and GridION devices, and achieves 2.8 Gb theoretical maximum output (TMO) for 1D experiments. The MinION Flow Cell (R9.4.1) supports MinION and GridION with 512 channels and a 50 Gb TMO. The PromethION Flow Cell (R10.4.1) caters to PromethION 2 Solo, P24, and P48, offering 2675 channels and a 290 Gb TMO. It features R10 nanopores with a double reader-head configuration, ideal for high-accuracy experiments, achieving over 99 % accuracy with Kit 14 chemistry. The MinION is a portable sequencing device with a 50 Gb TMO, providing immediate access to long-read data in various settings. The GridION, accommodating 1–5 flow cells, is a benchtop device with integrated computing, delivering a 250 Gb TMO for versatile applications. PromethION 2 devices offer high-yield sequencing (580 Gb) for small to medium-sized labs, supporting up to ∼200 flow cells per year. The PromethION series includes P24 and P48, with P48 providing twice the capacity (14 Tb) of P24, suitable for large-scale projects.\nIn 2023, Nature declared long-read sequencing as the Method of the Year, marking a significant milestone in genomic research (Marx 2023). These innovations have driven modern genomics forward, promoting substantial advances in personalized medicine, genetic variability studies, and understanding genomic complexities.",
+    "crumbs": [
+      "Sequencing",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Nanopore sequencing</span>"
+    ]
+  },
+  {
+    "objectID": "nanopore.html#dnaextraction",
+    "href": "nanopore.html#dnaextraction",
+    "title": "3  Nanopore sequencing",
+    "section": "\n3.2 DNA/Extraction",
+    "text": "3.2 DNA/Extraction\n\n\n\n\n\n\nThis section is under construction",
+    "crumbs": [
+      "Sequencing",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Nanopore sequencing</span>"
+    ]
+  },
+  {
+    "objectID": "nanopore.html#sequencing",
+    "href": "nanopore.html#sequencing",
+    "title": "3  Nanopore sequencing",
+    "section": "\n3.3 Sequencing",
+    "text": "3.3 Sequencing\n\n\n\n\n\n\nThis section is under construction",
+    "crumbs": [
+      "Sequencing",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Nanopore sequencing</span>"
+    ]
+  },
+  {
+    "objectID": "nanopore.html#bioinformatics-analysis",
+    "href": "nanopore.html#bioinformatics-analysis",
+    "title": "3  Nanopore sequencing",
+    "section": "\n3.4 Bioinformatics analysis",
+    "text": "3.4 Bioinformatics analysis\n\n\n\n\n\n\nThe generated files are very large!\n\n\n\nPay attention to the resources available on your system. POD5 files generated from whole genome sequencing with PromethION can easily exceed 1 TB. Aligned BAMs can exceed 200 GB.\nIf you do not have sufficient storage, we recommend that you cut out a region (a gene, for example) to continue.\n\n\n\n\nBioinformatics Pipeline\n\n\n3.4.1 Basecalling\nThe first step is to convert the electrical signal stored in the POD5 files into the sequence bases. In nanopore this is performed by Dorado (Github| Documentation).\n\n\n\n\n\n\nDownload the pre-compiled release!\n\n\n\nhttps://github.com/nanoporetech/dorado/releases\n\n\n\n3.4.1.1 Dorado basecalling\nThe Dorado basecalling command is:\n\ndorado basecaller hac pod5s/ &gt; calls.bam\n\nWhere hac is the argument for the High Accuracy model, pod5s/ the path for your POD5 files, and calls.bam is the unaligned BAM file. This command will save the output in your current directory. Although this command is sufficient to run the basecall, there are some additional arguments that you may find useful.\n\n3.4.1.2 Dorado models\nDorado can automatically select a basecalling model based on a chosen model speed (fast, hac, sup) and the POD5 data. If the model is not available locally, Dorado will automatically download it for use.\nAdditionally, Dorado supports the use of model paths.\nTo list the available models, run:\n\ndorado download --list \"all\"\n\nIf you wish and have the space, you can download all available templates. Otherwise, please specify the desired model. I recommend that you use the --models-directory argument so that you can control where the models will be stored.\n\n#All models\ndorado download --model all --models-directory {PATH}\n\n#Specific model\ndorado download --model {MODEL} --models-directory {PATH}\n\nThe naming of Dorado models is systematically structured; each segment corresponds to a different aspect of the model, including both chemistry and run settings. Below are some examples of the simplex basecalling models:\ndna_r10.4.1_e8.2_400bps_sup@v5.2.0\nrna004_130bps_hac@v5.2.0\nThe structure of dorado models names is:\n\n{analyte}_{pore}_{chemistry}_{speed}@version\n\n\n3.4.2 Quality control (QC)\n\n3.4.3 Genome Mapping\n\n3.4.4 Variant calling\n\n3.4.5 Base modification analysis\n\n\n\n\nBowden, Rory, Robert W. Davies, Andreas Heger, Alistair T. Pagnamenta, Mariateresa de Cesare, Laura E. Oikkonen, Duncan Parkes, et al. 2019. “Sequencing of Human Genomes with Nanopore Technology.” Nature Communications 10 (1). https://doi.org/10.1038/s41467-019-09637-5.\n\n\nDelahaye, Clara, and Jacques Nicolas. 2021a. “Sequencing DNA with Nanopores: Troubles and Biases.” Edited by Eduardo Andrés-León. PLOS ONE 16 (10): e0257521. https://doi.org/10.1371/journal.pone.0257521.\n\n\n———. 2021b. “Sequencing DNA with Nanopores: Troubles and Biases.” Edited by Eduardo Andrés-León. PLOS ONE 16 (10): e0257521. https://doi.org/10.1371/journal.pone.0257521.\n\n\nIp, Camilla L. C., Matthew Loose, John R. Tyson, Mariateresa de Cesare, Bonnie L. Brown, Miten Jain, Richard M. Leggett, et al. 2015. “MinION Analysis and Reference Consortium: Phase 1 Data Release and Analysis.” F1000Research 4 (October): 1075. https://doi.org/10.12688/f1000research.7201.1.\n\n\nJain, Miten, Sergey Koren, Karen H Miga, Josh Quick, Arthur C Rand, Thomas A Sasani, John R Tyson, et al. 2018. “Nanopore Sequencing and Assembly of a Human Genome with Ultra-Long Reads.” Nature Biotechnology 36 (4): 338–45. https://doi.org/10.1038/nbt.4060.\n\n\nJain, Miten, Hugh E. Olsen, Benedict Paten, and Mark Akeson. 2016. “The Oxford Nanopore MinION: Delivery of Nanopore Sequencing to the Genomics Community.” Genome Biology 17 (1). https://doi.org/10.1186/s13059-016-1103-0.\n\n\nLin, Bo, Jianan Hui, and Hongju Mao. 2021. “Nanopore Technology and Its Applications in Gene Sequencing.” Biosensors 11 (7): 214. https://doi.org/10.3390/bios11070214.\n\n\nMarx, Vivien. 2023. “Method of the Year: Long-Read Sequencing.” Nature Methods 20 (1): 6–11. https://doi.org/10.1038/s41592-022-01730-w.\n\n\nTyson, John R., Nigel J. O’Neil, Miten Jain, Hugh E. Olsen, Philip Hieter, and Terrance P. Snutch. 2017. “MinION-Based Long-Read Sequencing and Assembly Extends the Caenorhabditis Elegans Reference Genome.” Genome Research 28 (2): 266–74. https://doi.org/10.1101/gr.221184.117.\n\n\nWan, Yuk Kei, Christopher Hendra, Ploy N. Pratanwanich, and Jonathan Göke. 2022. “Beyond Sequencing: Machine Learning Algorithms Extract Biology Hidden in Nanopore Signal Data.” Trends in Genetics 38 (3): 246–57. https://doi.org/10.1016/j.tig.2021.09.001.\n\n\nWang, Jiaxu, Lin Yang, Anthony Cheng, Cheng-Yong Tham, Wenting Tan, Jefferson Darmawan, Paola Florez de Sessions, and Yue Wan. 2024. “Direct RNA Sequencing Coupled with Adaptive Sampling Enriches RNAs of Interest in the Transcriptome.” Nature Communications 15 (1). https://doi.org/10.1038/s41467-023-44656-3.\n\n\nWang, Yunhao, Yue Zhao, Audrey Bollas, Yuru Wang, and Kin Fai Au. 2021. “Nanopore Sequencing Technology, Bioinformatics and Applications.” Nature Biotechnology 39 (11): 1348–65. https://doi.org/10.1038/s41587-021-01108-x.\n\n\nWorkman, Rachael E., Alison D. Tang, Paul S. Tang, Miten Jain, John R. Tyson, Roham Razaghi, Philip C. Zuzarte, et al. 2019. “Nanopore Native RNA Sequencing of a Human Poly(A) Transcriptome.” Nature Methods 16 (12): 1297–1305. https://doi.org/10.1038/s41592-019-0617-2.",
+    "crumbs": [
+      "Sequencing",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Nanopore sequencing</span>"
+    ]
+  },
+  {
+    "objectID": "rbase.html",
+    "href": "rbase.html",
+    "title": "R base",
+    "section": "",
+    "text": "This section is under construction",
+    "crumbs": [
+      "R base"
+    ]
+  },
+  {
     "objectID": "rpackages_intro.html",
     "href": "rpackages_intro.html",
     "title": "R packages",
     "section": "",
-    "text": "This page is under construction",
+    "text": "This section is under construction",
     "crumbs": [
       "R packages"
+    ]
+  },
+  {
+    "objectID": "bioinformatics.html",
+    "href": "bioinformatics.html",
+    "title": "Bioinformatics",
+    "section": "",
+    "text": "This section is under construction",
+    "crumbs": [
+      "Bioinformatics"
+    ]
+  },
+  {
+    "objectID": "bioinformatics_files.html",
+    "href": "bioinformatics_files.html",
+    "title": "4  Files",
+    "section": "",
+    "text": "4.1 FASTA\nA FASTA file is a fundamental text-based format used in bioinformatics to store nucleotide sequences (DNA, RNA) or amino acid sequences (proteins). Named after the FASTA software package, this format has become the de facto standard for sequence data storage and exchange across virtually all biological databases and analysis tools.",
+    "crumbs": [
+      "Bioinformatics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Files</span>"
+    ]
+  },
+  {
+    "objectID": "bioinformatics_files.html#fasta",
+    "href": "bioinformatics_files.html#fasta",
+    "title": "4  Files",
+    "section": "",
+    "text": "4.1.1 Structure and Format\nFASTA files follow a simple two-line structure that alternates throughout the file. Each sequence entry begins with a header line starting with a greater-than symbol (&gt;) followed by a sequence identifier and optional description. The subsequent line(s) contain the actual sequence data using standard nucleotide codes (A, T, G, C for DNA; A, U, G, C for RNA) or amino acid single-letter codes for proteins.\nThe header line serves as both a unique identifier and a place for metadata. It typically includes accession numbers, gene names, organism information, and functional annotations. Sequence data can span multiple lines, with most tools accepting various line lengths, though 60-80 characters per line is conventional for readability.\n\n\n4.1.2 Common Applications\nFASTA files are ubiquitous in molecular biology and genomics research. They store reference genomes, gene sequences, protein sequences, and RNA transcripts. Researchers use them for sequence alignment tasks, phylogenetic analysis, primer design, and database searches using tools like BLAST. They’re essential for storing assembled genomes, transcriptomes from RNA-seq experiments, and protein sequences from mass spectrometry or computational prediction.\n\n\n4.1.3 Advantages and Versatility\nThe format’s human-readable nature allows for easy inspection and manual editing when necessary. Its simplicity enables straightforward parsing by programming languages and bioinformatics tools. FASTA files can represent sequences of any length, from short oligonucleotides to entire chromosomes, making them suitable for diverse applications from molecular cloning to whole-genome analysis.\n\n\n4.1.4 File Variants and Extensions\nWhile the basic FASTA format is standardized, several variants exist for specific purposes. Multi-FASTA files contain multiple sequences in a single file, commonly used for gene families or whole proteomes. Compressed versions (.fa.gz, .fasta.gz) save storage space for large datasets. Some specialized formats like FASTQ extend FASTA by adding quality scores for sequencing data.\n\n\n4.1.5 Database Integration\nMajor biological databases including NCBI GenBank, UniProt, and Ensembl distribute their sequence data primarily in FASTA format. This standardization facilitates seamless data exchange between different research groups, software tools, and analysis pipelines, making FASTA files indispensable for computational biology workflows and collaborative research efforts.",
+    "crumbs": [
+      "Bioinformatics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Files</span>"
+    ]
+  },
+  {
+    "objectID": "bioinformatics_files.html#fastq",
+    "href": "bioinformatics_files.html#fastq",
+    "title": "4  Files",
+    "section": "4.2 FASTQ",
+    "text": "4.2 FASTQ\n\n\n\n\n\n\nThis section is under construction",
+    "crumbs": [
+      "Bioinformatics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Files</span>"
+    ]
+  },
+  {
+    "objectID": "bioinformatics_files.html#bed",
+    "href": "bioinformatics_files.html#bed",
+    "title": "4  Files",
+    "section": "4.3 BED",
+    "text": "4.3 BED\nA BED (Browser Extensible Data) file is a standard tab-delimited text format used in bioinformatics to define genomic regions and features. Originally developed for the UCSC Genome Browser, BED files have become widely adopted across genomic analysis tools and databases for representing coordinate-based genomic data.\n\n4.3.1 Structure and Format\nBED files use a zero-based, half-open coordinate system where the start position is inclusive and the end position is exclusive. Each line represents a single genomic feature with tab-separated fields. The format supports both minimal 3-column entries and extended versions with up to 12 columns.\nThe three required fields are:\n\nchrom: Chromosome name (e.g., chr1, chr2, chrX)\nchromStart: Start position of the feature (0-based)\nchromEnd: End position of the feature (exclusive)\n\nOptional fields include name, score, strand, thick start/end positions for coding regions, RGB color values, and block information for representing complex features like exons within genes.\n\n\n4.3.2 Common Applications\nBED files serve numerous purposes in genomic research and analysis. They’re frequently used to represent gene annotations, regulatory elements like promoters and enhancers, ChIP-seq peaks, DNA methylation sites, and copy number variations. Researchers also use them to define regions of interest for targeted sequencing, mark repetitive elements, and annotate structural variants.\n\n\n4.3.3 Advantages and Compatibility\nThe format’s simplicity makes it human-readable and easy to parse programmatically. BED files are supported by virtually all major genomic visualization tools, including the UCSC Genome Browser, IGV, and Ensembl. They integrate seamlessly with command-line tools like BEDTools for performing set operations, intersections, and other genomic analyses.\n\n\n4.3.4 File Variants\nSeveral specialized variants exist, including BED3 (minimal 3-column format), BED6 (includes name, score, and strand), and BED12 (full format with block structure). There’s also bedGraph format for continuous-valued data and narrowPeak/broadPeak formats for ChIP-seq analysis results.\nThe BED format’s widespread adoption and versatility make it an essential file type for anyone working with genomic coordinate data, providing a standardized way to share and analyze positional information across different platforms and analysis pipelines.",
+    "crumbs": [
+      "Bioinformatics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Files</span>"
+    ]
+  },
+  {
+    "objectID": "bioinformatics_files.html#sambam",
+    "href": "bioinformatics_files.html#sambam",
+    "title": "4  Files",
+    "section": "4.4 SAM/BAM",
+    "text": "4.4 SAM/BAM\n\n\n\n\n\n\nThis section is under construction",
+    "crumbs": [
+      "Bioinformatics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Files</span>"
+    ]
+  },
+  {
+    "objectID": "bioinformatics_files.html#vcf",
+    "href": "bioinformatics_files.html#vcf",
+    "title": "4  Files",
+    "section": "4.5 VCF",
+    "text": "4.5 VCF\n\n\n\n\n\n\nThis section is under construction",
+    "crumbs": [
+      "Bioinformatics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Files</span>"
     ]
   },
   {
@@ -70,14 +221,24 @@
     ]
   },
   {
-    "objectID": "nanopore.html",
-    "href": "nanopore.html",
-    "title": "2  Nanopore sequencing",
+    "objectID": "ml_theory.html",
+    "href": "ml_theory.html",
+    "title": "5  Theory",
     "section": "",
-    "text": "2.1 This page is under construction",
+    "text": "This section is under construction",
     "crumbs": [
-      "Sequencing",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Nanopore sequencing</span>"
+      "Machine Learing",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Theory</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Bowden, Rory, Robert W. Davies, Andreas Heger, Alistair T. Pagnamenta,\nMariateresa de Cesare, Laura E. Oikkonen, Duncan Parkes, et al. 2019.\n“Sequencing of Human Genomes with Nanopore Technology.”\nNature Communications 10 (1). https://doi.org/10.1038/s41467-019-09637-5.\n\n\nDelahaye, Clara, and Jacques Nicolas. 2021a. “Sequencing DNA with\nNanopores: Troubles and Biases.” Edited by Eduardo Andrés-León.\nPLOS ONE 16 (10): e0257521. https://doi.org/10.1371/journal.pone.0257521.\n\n\n———. 2021b. “Sequencing DNA with Nanopores: Troubles and\nBiases.” Edited by Eduardo Andrés-León. PLOS ONE 16\n(10): e0257521. https://doi.org/10.1371/journal.pone.0257521.\n\n\nIp, Camilla L. C., Matthew Loose, John R. Tyson, Mariateresa de Cesare,\nBonnie L. Brown, Miten Jain, Richard M. Leggett, et al. 2015.\n“MinION Analysis and Reference Consortium: Phase 1 Data Release\nand Analysis.” F1000Research 4 (October): 1075. https://doi.org/10.12688/f1000research.7201.1.\n\n\nJain, Miten, Sergey Koren, Karen H Miga, Josh Quick, Arthur C Rand,\nThomas A Sasani, John R Tyson, et al. 2018. “Nanopore Sequencing\nand Assembly of a Human Genome with Ultra-Long Reads.” Nature\nBiotechnology 36 (4): 338–45. https://doi.org/10.1038/nbt.4060.\n\n\nJain, Miten, Hugh E. Olsen, Benedict Paten, and Mark Akeson. 2016.\n“The Oxford Nanopore MinION: Delivery of Nanopore Sequencing to\nthe Genomics Community.” Genome Biology 17 (1). https://doi.org/10.1186/s13059-016-1103-0.\n\n\nLin, Bo, Jianan Hui, and Hongju Mao. 2021. “Nanopore Technology\nand Its Applications in Gene Sequencing.” Biosensors 11\n(7): 214. https://doi.org/10.3390/bios11070214.\n\n\nMarx, Vivien. 2023. “Method of the Year: Long-Read\nSequencing.” Nature Methods 20 (1): 6–11. https://doi.org/10.1038/s41592-022-01730-w.\n\n\nTyson, John R., Nigel J. O’Neil, Miten Jain, Hugh E. Olsen, Philip\nHieter, and Terrance P. Snutch. 2017. “MinION-Based Long-Read\nSequencing and Assembly Extends the Caenorhabditis\nElegans Reference Genome.” Genome Research\n28 (2): 266–74. https://doi.org/10.1101/gr.221184.117.\n\n\nWan, Yuk Kei, Christopher Hendra, Ploy N. Pratanwanich, and Jonathan\nGöke. 2022. “Beyond Sequencing: Machine Learning Algorithms\nExtract Biology Hidden in Nanopore Signal Data.” Trends in\nGenetics 38 (3): 246–57. https://doi.org/10.1016/j.tig.2021.09.001.\n\n\nWang, Jiaxu, Lin Yang, Anthony Cheng, Cheng-Yong Tham, Wenting Tan,\nJefferson Darmawan, Paola Florez de Sessions, and Yue Wan. 2024.\n“Direct RNA Sequencing Coupled with Adaptive Sampling Enriches\nRNAs of Interest in the Transcriptome.” Nature\nCommunications 15 (1). https://doi.org/10.1038/s41467-023-44656-3.\n\n\nWang, Yunhao, Yue Zhao, Audrey Bollas, Yuru Wang, and Kin Fai Au. 2021.\n“Nanopore Sequencing Technology, Bioinformatics and\nApplications.” Nature Biotechnology 39 (11): 1348–65. https://doi.org/10.1038/s41587-021-01108-x.\n\n\nWorkman, Rachael E., Alison D. Tang, Paul S. Tang, Miten Jain, John R.\nTyson, Roham Razaghi, Philip C. Zuzarte, et al. 2019. “Nanopore\nNative RNA Sequencing of a Human Poly(A) Transcriptome.”\nNature Methods 16 (12): 1297–1305. https://doi.org/10.1038/s41592-019-0617-2.",
+    "crumbs": [
+      "References"
     ]
   }
 ]

@@ -1,4 +1,4 @@
-# Introduction
+# Bioinformatics
 
 ::: callout-caution
 ## This section is under construction

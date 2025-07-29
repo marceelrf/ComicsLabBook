@@ -1,1 +1,17 @@
-# About this book {.unnumbered}
+# Welcome to Course Materials {.unnumbered}
+
+This online resource provides comprehensive materials for my courses, organized for easy navigation and accessibility. The content is structured to support both in-class learning and independent study.
+
+## About This Book
+
+This digital compendium contains lecture notes, assignments, readings, and supplementary materials designed to enhance your learning experience. Each section builds upon previous concepts while providing standalone resources that can be referenced as needed.
+
+## How to Navigate
+
+The Table of Contents on the left sidebar provides quick access to all materials. Chapters are organized sequentially to follow the course progression, but each section includes cross-references to related topics throughout the book.
+
+## Getting Started
+
+Begin with the introductory chapters to establish foundational knowledge, then progress through the materials at your own pace. Use the search function to quickly locate specific topics or concepts.
+
+All materials are regularly updated to reflect current best practices and emerging developments in the field. Please check back periodically for new content and revisions.

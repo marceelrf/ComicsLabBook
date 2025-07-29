@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Machine Learing – Material Book</title>
+<title>4&nbsp; Files – Material Book</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ml_theory.html" rel="next">
-<link href="./bioinformatics_files.html" rel="prev">
+<link href="./ml_intro.html" rel="next">
+<link href="./bioinformatics.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ml_intro.html">Machine Learing</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./bioinformatics.html">Bioinformatics</a></li><li class="breadcrumb-item"><a href="./bioinformatics_files.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Files</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -160,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bioinformatics_files.html" class="sidebar-item-text sidebar-link">
+  <a href="./bioinformatics_files.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Files</span></span></a>
   </div>
 </li>
@@ -168,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./ml_intro.html" class="sidebar-item-text sidebar-link active">
+            <a href="./ml_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Machine Learing</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -194,15 +194,38 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#fasta" id="toc-fasta" class="nav-link active" data-scroll-target="#fasta"><span class="header-section-number">4.1</span> FASTA</a>
+  <ul class="collapse">
+  <li><a href="#structure-and-format" id="toc-structure-and-format" class="nav-link" data-scroll-target="#structure-and-format"><span class="header-section-number">4.1.1</span> Structure and Format</a></li>
+  <li><a href="#common-applications" id="toc-common-applications" class="nav-link" data-scroll-target="#common-applications"><span class="header-section-number">4.1.2</span> Common Applications</a></li>
+  <li><a href="#advantages-and-versatility" id="toc-advantages-and-versatility" class="nav-link" data-scroll-target="#advantages-and-versatility"><span class="header-section-number">4.1.3</span> Advantages and Versatility</a></li>
+  <li><a href="#file-variants-and-extensions" id="toc-file-variants-and-extensions" class="nav-link" data-scroll-target="#file-variants-and-extensions"><span class="header-section-number">4.1.4</span> File Variants and Extensions</a></li>
+  <li><a href="#database-integration" id="toc-database-integration" class="nav-link" data-scroll-target="#database-integration"><span class="header-section-number">4.1.5</span> Database Integration</a></li>
+  </ul></li>
+  <li><a href="#fastq" id="toc-fastq" class="nav-link" data-scroll-target="#fastq"><span class="header-section-number">4.2</span> FASTQ</a></li>
+  <li><a href="#bed" id="toc-bed" class="nav-link" data-scroll-target="#bed"><span class="header-section-number">4.3</span> BED</a>
+  <ul class="collapse">
+  <li><a href="#structure-and-format-1" id="toc-structure-and-format-1" class="nav-link" data-scroll-target="#structure-and-format-1"><span class="header-section-number">4.3.1</span> Structure and Format</a></li>
+  <li><a href="#common-applications-1" id="toc-common-applications-1" class="nav-link" data-scroll-target="#common-applications-1"><span class="header-section-number">4.3.2</span> Common Applications</a></li>
+  <li><a href="#advantages-and-compatibility" id="toc-advantages-and-compatibility" class="nav-link" data-scroll-target="#advantages-and-compatibility"><span class="header-section-number">4.3.3</span> Advantages and Compatibility</a></li>
+  <li><a href="#file-variants" id="toc-file-variants" class="nav-link" data-scroll-target="#file-variants"><span class="header-section-number">4.3.4</span> File Variants</a></li>
+  </ul></li>
+  <li><a href="#sambam" id="toc-sambam" class="nav-link" data-scroll-target="#sambam"><span class="header-section-number">4.4</span> SAM/BAM</a></li>
+  <li><a href="#vcf" id="toc-vcf" class="nav-link" data-scroll-target="#vcf"><span class="header-section-number">4.5</span> VCF</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./bioinformatics.html">Bioinformatics</a></li><li class="breadcrumb-item"><a href="./bioinformatics_files.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Files</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-ml" class="quarto-section-identifier">Machine Learing</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Files</span></h1>
 </div>
 
 
@@ -225,7 +248,107 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-This page is under construction
+This section is under construction
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<section id="fasta" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="fasta"><span class="header-section-number">4.1</span> FASTA</h2>
+<p>A FASTA file is a fundamental text-based format used in bioinformatics to store nucleotide sequences (DNA, RNA) or amino acid sequences (proteins). Named after the FASTA software package, this format has become the de facto standard for sequence data storage and exchange across virtually all biological databases and analysis tools.</p>
+<section id="structure-and-format" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="structure-and-format"><span class="header-section-number">4.1.1</span> Structure and Format</h3>
+<p>FASTA files follow a simple two-line structure that alternates throughout the file. Each sequence entry begins with a header line starting with a greater-than symbol (&gt;) followed by a sequence identifier and optional description. The subsequent line(s) contain the actual sequence data using standard nucleotide codes (A, T, G, C for DNA; A, U, G, C for RNA) or amino acid single-letter codes for proteins.</p>
+<p>The header line serves as both a unique identifier and a place for metadata. It typically includes accession numbers, gene names, organism information, and functional annotations. Sequence data can span multiple lines, with most tools accepting various line lengths, though 60-80 characters per line is conventional for readability.</p>
+</section>
+<section id="common-applications" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="common-applications"><span class="header-section-number">4.1.2</span> Common Applications</h3>
+<p>FASTA files are ubiquitous in molecular biology and genomics research. They store reference genomes, gene sequences, protein sequences, and RNA transcripts. Researchers use them for sequence alignment tasks, phylogenetic analysis, primer design, and database searches using tools like BLAST. They’re essential for storing assembled genomes, transcriptomes from RNA-seq experiments, and protein sequences from mass spectrometry or computational prediction.</p>
+</section>
+<section id="advantages-and-versatility" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="advantages-and-versatility"><span class="header-section-number">4.1.3</span> Advantages and Versatility</h3>
+<p>The format’s human-readable nature allows for easy inspection and manual editing when necessary. Its simplicity enables straightforward parsing by programming languages and bioinformatics tools. FASTA files can represent sequences of any length, from short oligonucleotides to entire chromosomes, making them suitable for diverse applications from molecular cloning to whole-genome analysis.</p>
+</section>
+<section id="file-variants-and-extensions" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="file-variants-and-extensions"><span class="header-section-number">4.1.4</span> File Variants and Extensions</h3>
+<p>While the basic FASTA format is standardized, several variants exist for specific purposes. Multi-FASTA files contain multiple sequences in a single file, commonly used for gene families or whole proteomes. Compressed versions (.fa.gz, .fasta.gz) save storage space for large datasets. Some specialized formats like FASTQ extend FASTA by adding quality scores for sequencing data.</p>
+</section>
+<section id="database-integration" class="level3" data-number="4.1.5">
+<h3 data-number="4.1.5" class="anchored" data-anchor-id="database-integration"><span class="header-section-number">4.1.5</span> Database Integration</h3>
+<p>Major biological databases including NCBI GenBank, UniProt, and Ensembl distribute their sequence data primarily in FASTA format. This standardization facilitates seamless data exchange between different research groups, software tools, and analysis pipelines, making FASTA files indispensable for computational biology workflows and collaborative research efforts.</p>
+</section>
+</section>
+<section id="fastq" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="fastq"><span class="header-section-number">4.2</span> FASTQ</h2>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+This section is under construction
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+<section id="bed" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="bed"><span class="header-section-number">4.3</span> BED</h2>
+<p>A BED (Browser Extensible Data) file is a standard tab-delimited text format used in bioinformatics to define genomic regions and features. Originally developed for the UCSC Genome Browser, BED files have become widely adopted across genomic analysis tools and databases for representing coordinate-based genomic data.</p>
+<section id="structure-and-format-1" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="structure-and-format-1"><span class="header-section-number">4.3.1</span> Structure and Format</h3>
+<p>BED files use a zero-based, half-open coordinate system where the start position is inclusive and the end position is exclusive. Each line represents a single genomic feature with tab-separated fields. The format supports both minimal 3-column entries and extended versions with up to 12 columns.</p>
+<p>The three required fields are:</p>
+<ul>
+<li><p><strong>chrom</strong>: Chromosome name (e.g., chr1, chr2, chrX)</p></li>
+<li><p><strong>chromStart</strong>: Start position of the feature (0-based)</p></li>
+<li><p><strong>chromEnd</strong>: End position of the feature (exclusive)</p></li>
+</ul>
+<p>Optional fields include name, score, strand, thick start/end positions for coding regions, RGB color values, and block information for representing complex features like exons within genes.</p>
+</section>
+<section id="common-applications-1" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="common-applications-1"><span class="header-section-number">4.3.2</span> Common Applications</h3>
+<p>BED files serve numerous purposes in genomic research and analysis. They’re frequently used to represent gene annotations, regulatory elements like promoters and enhancers, ChIP-seq peaks, DNA methylation sites, and copy number variations. Researchers also use them to define regions of interest for targeted sequencing, mark repetitive elements, and annotate structural variants.</p>
+</section>
+<section id="advantages-and-compatibility" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="advantages-and-compatibility"><span class="header-section-number">4.3.3</span> Advantages and Compatibility</h3>
+<p>The format’s simplicity makes it human-readable and easy to parse programmatically. BED files are supported by virtually all major genomic visualization tools, including the UCSC Genome Browser, IGV, and Ensembl. They integrate seamlessly with command-line tools like BEDTools for performing set operations, intersections, and other genomic analyses.</p>
+</section>
+<section id="file-variants" class="level3" data-number="4.3.4">
+<h3 data-number="4.3.4" class="anchored" data-anchor-id="file-variants"><span class="header-section-number">4.3.4</span> File Variants</h3>
+<p>Several specialized variants exist, including BED3 (minimal 3-column format), BED6 (includes name, score, and strand), and BED12 (full format with block structure). There’s also bedGraph format for continuous-valued data and narrowPeak/broadPeak formats for ChIP-seq analysis results.</p>
+<p>The BED format’s widespread adoption and versatility make it an essential file type for anyone working with genomic coordinate data, providing a standardized way to share and analyze positional information across different platforms and analysis pipelines.</p>
+</section>
+</section>
+<section id="sambam" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sambam"><span class="header-section-number">4.4</span> SAM/BAM</h2>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+This section is under construction
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+<section id="vcf" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="vcf"><span class="header-section-number">4.5</span> VCF</h2>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+This section is under construction
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -234,6 +357,7 @@ This page is under construction
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -655,13 +779,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./bioinformatics_files.html" class="pagination-link" aria-label="Files">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Files</span></span>
+      <a href="./bioinformatics.html" class="pagination-link" aria-label="Bioinformatics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Bioinformatics</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ml_theory.html" class="pagination-link" aria-label="Theory">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Theory</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ml_intro.html" class="pagination-link" aria-label="Machine Learing">
+        <span class="nav-page-text">Machine Learing</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

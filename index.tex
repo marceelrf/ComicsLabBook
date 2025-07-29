@@ -1,0 +1,522 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrreprt}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{svg}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Material Book},
+  pdfauthor={Marcel Ferreira},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Material Book}
+\author{Marcel Ferreira}
+\date{2025-07-23}
+
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{Table of contents}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+
+\bookmarksetup{startatroot}
+
+\chapter*{About this book}\label{about-this-book}
+\addcontentsline{toc}{chapter}{About this book}
+
+\markboth{About this book}{About this book}
+
+\bookmarksetup{startatroot}
+
+\chapter{Introduction}\label{introduction}
+
+This is a book created from markdown and executable code.
+
+See Knuth (1984) for additional discussion of literate programming.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{1} \SpecialCharTok{+} \DecValTok{1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 2
+\end{verbatim}
+
+\part{Sequencing}
+
+\section*{This page is under
+construction}\label{this-page-is-under-construction}
+\addcontentsline{toc}{section}{This page is under construction}
+
+\markright{This page is under construction}
+
+\chapter{Nanopore sequencing}\label{sec-nanoseq}
+
+\section{Intro}\label{intro}
+
+Within the panorama of third-generation sequencing, ONT stands as a
+vanguard, contributing distinctive innovations to the DNA/RNA sequencing
+landscape. Pioneering the concept of nanopore sequencing, ONT employs
+biological nanopores embedded in synthetic membranes to analyze nucleic
+acids in real time
+\href{https://www.sciencedirect.com/science/article/pii/S1872497324001522\#bib37}{{[}37{]}},
+\href{https://www.sciencedirect.com/science/article/pii/S1872497324001522\#bib39}{{[}39{]}}.
+The portable MinION device, emblematic of Oxford Nanopore's approach,
+enables on-demand, long-read sequencing with unparalleled flexibility,
+given its small size (105\,mm×23\,mm x 33\,mm) and weight (87\,g)
+\href{https://www.sciencedirect.com/science/article/pii/S1872497324001522\#bib47}{{[}47{]}},
+\href{https://www.sciencedirect.com/science/article/pii/S1872497324001522\#bib48}{{[}48{]}},
+\href{https://www.sciencedirect.com/science/article/pii/S1872497324001522\#bib49}{{[}49{]}}.
+The nanopore-based sequencing mechanism allows for the direct,
+electronic detection of nucleotide sequences as they pass through the
+nanopore, offering advantages regarding read length and adaptability to
+various sample. For example, this allows the RNA strand to be sequenced
+directly, i.e., without synthesizing complementary DNA, making it easier
+to identify isoforms and determine the length of the poly-A tail
+\href{https://www.sciencedirect.com/science/article/pii/S1872497324001522\#bib39}{{[}39{]}},
+\href{https://www.sciencedirect.com/science/article/pii/S1872497324001522\#bib50}{{[}50{]}},
+\href{https://www.sciencedirect.com/science/article/pii/S1872497324001522\#bib51}{{[}51{]}},
+\href{https://www.sciencedirect.com/science/article/pii/S1872497324001522\#bib52}{{[}52{]}}.
+Bypassing bias-inducing steps like polymerase chain reaction (PCR),
+direct sequencing provides accurate, native data on the target molecule
+\href{https://www.sciencedirect.com/science/article/pii/S1872497324001522\#bib53}{{[}53{]}},
+\href{https://www.sciencedirect.com/science/article/pii/S1872497324001522\#bib54}{{[}54{]}},
+\href{https://www.sciencedirect.com/science/article/pii/S1872497324001522\#bib55}{{[}55{]}}.
+Nanopore sequencing has two modes: simplex and duplex. In the simplex
+mode (also known as 1D), a nanopore sequences only one DNA strand. In
+the duplex mode, both strands of DNA are sequenced (one immediately
+after the other), resulting in a twofold sequencing procedure that
+facilitates base correction
+\href{https://www.sciencedirect.com/science/article/pii/S1872497324001522\#bib39}{{[}39{]}},
+\href{https://www.sciencedirect.com/science/article/pii/S1872497324001522\#bib56}{{[}56{]}},
+\href{https://www.sciencedirect.com/science/article/pii/S1872497324001522\#bib57}{{[}57{]}}.
+
+Nanopore sequencing employs specialized flow cells tailored to distinct
+devices, each with unique capacities. The Flongle Flow Cell (R9.4.1) has
+126 channels, interfaces with Flongle, MinION, and GridION devices, and
+achieves 2.8\,Gb theoretical maximum output (TMO) for 1D experiments.
+The MinION Flow Cell (R9.4.1) supports MinION and GridION with 512
+channels and a 50\,Gb TMO. The PromethION Flow Cell (R10.4.1) caters to
+PromethION 2 Solo, P24, and P48, offering 2675 channels and a 290\,Gb
+TMO. It features R10 nanopores with a double reader-head configuration,
+ideal for high-accuracy experiments, achieving over 99\,\% accuracy with
+Kit 14 chemistry. The MinION is a portable sequencing device with a
+50\,Gb TMO, providing immediate access to long-read data in various
+settings. The GridION, accommodating 1--5 flow cells, is a benchtop
+device with integrated computing, delivering a 250\,Gb TMO for versatile
+applications. PromethION 2 devices offer high-yield sequencing (580\,Gb)
+for small to medium-sized labs, supporting up to ∼200 flow cells per
+year. The PromethION series includes P24 and P48, with P48 providing
+twice the capacity (14 Tb) of P24, suitable for large-scale projects.
+
+In 2023, Nature declared long-read sequencing as the Method of the Year,
+marking a significant milestone in genomic research
+\href{https://www.sciencedirect.com/science/article/pii/S1872497324001522\#bib58}{{[}58{]}}.
+These innovations have driven modern genomics forward, promoting
+substantial advances in personalized medicine, genetic variability
+studies, and understanding genomic complexities.
+
+\section{DNA/Extraction}\label{dnaextraction}
+
+\section{Sequencing}\label{sequencing}
+
+\section{Bioinformatics analysis}\label{bioinformatics-analysis}
+
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, arc=.35mm, breakable, leftrule=.75mm, bottomtitle=1mm, opacityback=0, colframe=quarto-callout-caution-color-frame, colback=white, bottomrule=.15mm, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toptitle=1mm, left=2mm, rightrule=.15mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{The generated files are very large!}, toprule=.15mm, opacitybacktitle=0.6]
+
+Pay attention to the resources available on your system. POD5 files
+generated from whole genome sequencing with PromethION can easily exceed
+1 TB. Aligned BAMs can exceed 200 GB.
+
+If you do not have sufficient storage, we recommend that you cut out a
+region (a gene, for example) to continue.
+
+\end{tcolorbox}
+
+\begin{figure}[H]
+
+{\centering \includesvg[width=5.34375in,height=\textheight,keepaspectratio]{Mermaid Chart - Create complex, visual diagrams with text. A smarter way of creating diagrams.-2025-07-23-163425.svg}
+
+}
+
+\caption{Bioinformatics Pipeline}
+
+\end{figure}%
+
+\subsection{Basecalling}\label{basecalling}
+
+The first step is to convert the electrical signal stored in the POD5
+files into the sequence bases. In nanopore this is performed by Dorado
+(\href{https://github.com/nanoporetech/dorado}{Github}\textbar{}
+\href{https://dorado-docs.readthedocs.io/en/latest/}{Documentation}).
+
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, arc=.35mm, breakable, leftrule=.75mm, bottomtitle=1mm, opacityback=0, colframe=quarto-callout-tip-color-frame, colback=white, bottomrule=.15mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, left=2mm, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Download the pre-compiled release!}, toprule=.15mm, opacitybacktitle=0.6]
+
+\url{https://github.com/nanoporetech/dorado/releases}
+
+\end{tcolorbox}
+
+\subsubsection{Dorado basecalling}\label{dorado-basecalling}
+
+The Dorado basecalling command is:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{dorado}\NormalTok{ basecaller hac pod5s/ }\OperatorTok{\textgreater{}}\NormalTok{ calls.bam}
+\end{Highlighting}
+\end{Shaded}
+
+Where \texttt{hac} is the argument for the \textbf{\emph{High Accuracy
+model}}, \texttt{pod5s/} the path for your POD5 files, and
+\texttt{calls.bam} is the unaligned BAM file. This command will save the
+output in your current directory. Although this command is sufficient to
+run the basecall, there are some additional arguments that you may find
+useful.
+
+\subsubsection{Dorado models}\label{dorado-models}
+
+Dorado can automatically select a basecalling model based on a chosen
+model speed (\texttt{fast}, \texttt{hac}, \texttt{sup}) and the POD5
+data. If the model is not available locally, Dorado will automatically
+download it for use.
+
+Additionally, Dorado supports the use of model paths.
+
+To list the available models, run:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{dorado}\NormalTok{ download }\AttributeTok{{-}{-}list} \StringTok{"all"}
+\end{Highlighting}
+\end{Shaded}
+
+If you wish and have the space, you can download all available
+templates. Otherwise, please specify the desired model. I recommend that
+you use the \texttt{-\/-models-directory} argument so that you can
+control where the models will be stored.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#All models}
+\ExtensionTok{dorado}\NormalTok{ download }\AttributeTok{{-}{-}model}\NormalTok{ all }\AttributeTok{{-}{-}models{-}directory}\NormalTok{ \{PATH\}}
+
+\CommentTok{\#Specific model}
+\ExtensionTok{dorado}\NormalTok{ download }\AttributeTok{{-}{-}model}\NormalTok{ \{MODEL\} }\AttributeTok{{-}{-}models{-}directory}\NormalTok{ \{PATH\}}
+\end{Highlighting}
+\end{Shaded}
+
+The naming of Dorado models is systematically structured; each segment
+corresponds to a different aspect of the model, including both chemistry
+and run settings. Below are some examples of the simplex basecalling
+models:
+
+\texttt{dna\_r10.4.1\_e8.2\_400bps\_sup@v5.2.0}
+
+\texttt{rna004\_130bps\_hac@v5.2.0}
+
+The structure of dorado models names is:
+
+\texttt{\{analyte\}\_\{pore\}\_\{chemistry\}\_\{speed\}@version}
+
+\subsection{Quality control (QC)}\label{quality-control-qc}
+
+\subsection{Genome Mapping}\label{genome-mapping}
+
+\subsection{Variant calling}\label{variant-calling}
+
+\subsection{Base modification
+analysis}\label{base-modification-analysis}
+
+\part{R packages}
+
+\section*{This page is under
+construction}\label{this-page-is-under-construction-1}
+\addcontentsline{toc}{section}{This page is under construction}
+
+\markright{This page is under construction}
+
+\part{Machine Learing}
+
+\section*{This page is under
+construction}\label{this-page-is-under-construction-2}
+\addcontentsline{toc}{section}{This page is under construction}
+
+\markright{This page is under construction}
+
+\bookmarksetup{startatroot}
+
+\chapter{Summary}\label{summary}
+
+In summary, this book has no content whatsoever.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{1} \SpecialCharTok{+} \DecValTok{1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 2
+\end{verbatim}
+
+\bookmarksetup{startatroot}
+
+\chapter*{References}\label{references}
+\addcontentsline{toc}{chapter}{References}
+
+\markboth{References}{References}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-knuth84}
+Knuth, Donald E. 1984. {``Literate Programming.''} \emph{Comput. J.} 27
+(2): 97--111. \url{https://doi.org/10.1093/comjnl/27.2.97}.
+
+\end{CSLReferences}
+
+
+
+
+\end{document}

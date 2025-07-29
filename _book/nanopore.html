@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.39">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Marcel Ferreira">
-<meta name="dcterms.date" content="2025-06-03">
-
-<title>2&nbsp; Nanopore sequencing – Comics Lab Book</title>
+<meta name="dcterms.date" content="2025-07-29">
+<title>3&nbsp; Nanopore sequencing – Material Book</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,8 +19,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
-
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -32,8 +82,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./rpackages_intro.html" rel="next">
-<link href="./sequencing_intro.html" rel="prev">
+<link href="./rbase.html" rel="next">
+<link href="./illumina.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -42,8 +92,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4395d621a69062e58abce9f29c6c1b99.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-4395d621a69062e58abce9f29c6c1b99.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -70,35 +119,26 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-
-
 </head>
-
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sequencing_intro.html">Sequencing</a></li><li class="breadcrumb-item"><a href="./nanopore.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Nanopore sequencing</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sequencing_intro.html">Sequencing</a></li><li class="breadcrumb-item"><a href="./nanopore.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Nanopore sequencing</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Comics Lab Book</a> 
+      <a href="./">Material Book</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -108,10 +148,10 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">About this book</span></a>
+ <span class="menu-text">Welcome to Course Materials</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -128,28 +168,62 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./illumina.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Illumina</span></span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./nanopore.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Nanopore sequencing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Nanopore sequencing</span></span></a>
   </div>
 </li>
       </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">R base</span></span>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">R packages</span></span>
   </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Machine Learing</span></span>
-  </li>
-        <li class="sidebar-item">
+      <div class="sidebar-item-container"> 
+            <a href="./bioinformatics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bioinformatics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  <a href="./bioinformatics_files.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Files</span></span></a>
   </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./ml_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Machine Learing</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ml_theory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Theory</span></span></a>
+  </div>
+</li>
+      </ul>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
@@ -158,25 +232,31 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#this-page-is-under-construction" id="toc-this-page-is-under-construction" class="nav-link active" data-scroll-target="#this-page-is-under-construction"><span class="header-section-number">2.1</span> This page is under construction</a></li>
+<li><a href="#intro" id="toc-intro" class="nav-link active" data-scroll-target="#intro"><span class="header-section-number">3.1</span> Intro</a></li>
+  <li><a href="#dnaextraction" id="toc-dnaextraction" class="nav-link" data-scroll-target="#dnaextraction"><span class="header-section-number">3.2</span> DNA/Extraction</a></li>
+  <li><a href="#sequencing" id="toc-sequencing" class="nav-link" data-scroll-target="#sequencing"><span class="header-section-number">3.3</span> Sequencing</a></li>
+  <li>
+<a href="#bioinformatics-analysis" id="toc-bioinformatics-analysis" class="nav-link" data-scroll-target="#bioinformatics-analysis"><span class="header-section-number">3.4</span> Bioinformatics analysis</a>
+  <ul class="collapse">
+<li><a href="#basecalling" id="toc-basecalling" class="nav-link" data-scroll-target="#basecalling"><span class="header-section-number">3.4.1</span> Basecalling</a></li>
+  <li><a href="#quality-control-qc" id="toc-quality-control-qc" class="nav-link" data-scroll-target="#quality-control-qc"><span class="header-section-number">3.4.2</span> Quality control (QC)</a></li>
+  <li><a href="#genome-mapping" id="toc-genome-mapping" class="nav-link" data-scroll-target="#genome-mapping"><span class="header-section-number">3.4.3</span> Genome Mapping</a></li>
+  <li><a href="#variant-calling" id="toc-variant-calling" class="nav-link" data-scroll-target="#variant-calling"><span class="header-section-number">3.4.4</span> Variant calling</a></li>
+  <li><a href="#base-modification-analysis" id="toc-base-modification-analysis" class="nav-link" data-scroll-target="#base-modification-analysis"><span class="header-section-number">3.4.5</span> Base modification analysis</a></li>
   </ul>
-</nav>
+</li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sequencing_intro.html">Sequencing</a></li><li class="breadcrumb-item"><a href="./nanopore.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Nanopore sequencing</span></a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title"><span id="sec-nanoseq" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Nanopore sequencing</span></span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sequencing_intro.html">Sequencing</a></li><li class="breadcrumb-item"><a href="./nanopore.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Nanopore sequencing</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title"><span id="sec-nanoseq" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Nanopore sequencing</span></span></h1>
 </div>
 
 
@@ -193,7 +273,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 3, 2025</p>
+      <p class="date">July 29, 2025</p>
     </div>
   </div>
   
@@ -202,17 +282,159 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
+</header><section id="intro" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="intro">
+<span class="header-section-number">3.1</span> Intro</h2>
+<p>Within the panorama of third-generation sequencing, ONT stands as a vanguard, contributing distinctive innovations to the DNA/RNA sequencing landscape. Pioneering the concept of nanopore sequencing, ONT employs biological nanopores embedded in synthetic membranes to analyze nucleic acids in real time <span class="citation" data-cites="Jain2018 wang2021">(<a href="references.html#ref-Jain2018" role="doc-biblioref">Jain et al. 2018</a>; <a href="references.html#ref-wang2021" role="doc-biblioref">Y. Wang et al. 2021</a>)</span>. The portable MinION device, emblematic of Oxford Nanopore’s approach, enables on-demand, long-read sequencing with unparalleled flexibility, given its small size (105 mm×23 mm x 33 mm) and weight (87 g) <span class="citation" data-cites="ip2015 jain2016 tyson2017">(<a href="references.html#ref-ip2015" role="doc-biblioref">Ip et al. 2015</a>; <a href="references.html#ref-jain2016" role="doc-biblioref">Jain et al. 2016</a>; <a href="references.html#ref-tyson2017" role="doc-biblioref">Tyson et al. 2017</a>)</span>. The nanopore-based sequencing mechanism allows for the direct, electronic detection of nucleotide sequences as they pass through the nanopore, offering advantages regarding read length and adaptability to various sample. For example, this allows the RNA strand to be sequenced directly, i.e., without synthesizing complementary DNA, making it easier to identify isoforms and determine the length of the poly-A tail <span class="citation" data-cites="wang2021 wan2022 workman2019 wang2024">(<a href="references.html#ref-wang2021" role="doc-biblioref">Y. Wang et al. 2021</a>; <a href="references.html#ref-wan2022" role="doc-biblioref">Wan et al. 2022</a>; <a href="references.html#ref-workman2019" role="doc-biblioref">Workman et al. 2019</a>; <a href="references.html#ref-wang2024" role="doc-biblioref">J. Wang et al. 2024</a>)</span>. Bypassing bias-inducing steps like polymerase chain reaction (PCR), direct sequencing provides accurate, native data on the target molecule <span class="citation" data-cites="wang2021 bowden2019 delahaye2021 delahaye2021a">(<a href="references.html#ref-wang2021" role="doc-biblioref">Y. Wang et al. 2021</a>; <a href="references.html#ref-bowden2019" role="doc-biblioref">Bowden et al. 2019</a>; <a href="references.html#ref-delahaye2021" role="doc-biblioref">Delahaye and Nicolas 2021a</a>, <a href="references.html#ref-delahaye2021a" role="doc-biblioref">2021b</a>)</span>. Nanopore sequencing has two modes: simplex and duplex. In the simplex mode (also known as 1D), a nanopore sequences only one DNA strand. In the duplex mode, both strands of DNA are sequenced (one immediately after the other), resulting in a twofold sequencing procedure that facilitates base correction <span class="citation" data-cites="wang2021 lin2021">(<a href="references.html#ref-wang2021" role="doc-biblioref">Y. Wang et al. 2021</a>; <a href="references.html#ref-lin2021" role="doc-biblioref">Lin, Hui, and Mao 2021</a>)</span>.</p>
+<p>Nanopore sequencing employs specialized flow cells tailored to distinct devices, each with unique capacities. The Flongle Flow Cell (R9.4.1) has 126 channels, interfaces with Flongle, MinION, and GridION devices, and achieves 2.8 Gb theoretical maximum output (TMO) for 1D experiments. The MinION Flow Cell (R9.4.1) supports MinION and GridION with 512 channels and a 50 Gb TMO. The PromethION Flow Cell (R10.4.1) caters to PromethION 2 Solo, P24, and P48, offering 2675 channels and a 290 Gb TMO. It features R10 nanopores with a double reader-head configuration, ideal for high-accuracy experiments, achieving over 99 % accuracy with Kit 14 chemistry. The MinION is a portable sequencing device with a 50 Gb TMO, providing immediate access to long-read data in various settings. The GridION, accommodating 1–5 flow cells, is a benchtop device with integrated computing, delivering a 250 Gb TMO for versatile applications. PromethION 2 devices offer high-yield sequencing (580 Gb) for small to medium-sized labs, supporting up to ∼200 flow cells per year. The PromethION series includes P24 and P48, with P48 providing twice the capacity (14 Tb) of P24, suitable for large-scale projects.</p>
+<p>In 2023, Nature declared long-read sequencing as the Method of the Year, marking a significant milestone in genomic research <span class="citation" data-cites="marx2023">(<a href="references.html#ref-marx2023" role="doc-biblioref">Marx 2023</a>)</span>. These innovations have driven modern genomics forward, promoting substantial advances in personalized medicine, genetic variability studies, and understanding genomic complexities.</p>
+</section><section id="dnaextraction" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="dnaextraction">
+<span class="header-section-number">3.2</span> DNA/Extraction</h2>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+This section is under construction
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section><section id="sequencing" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="sequencing">
+<span class="header-section-number">3.3</span> Sequencing</h2>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+This section is under construction
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section><section id="bioinformatics-analysis" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="bioinformatics-analysis">
+<span class="header-section-number">3.4</span> Bioinformatics analysis</h2>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The generated files are very large!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pay attention to the resources available on your system. POD5 files generated from whole genome sequencing with PromethION can easily exceed 1 TB. Aligned BAMs can exceed 200 GB.</p>
+<p>If you do not have sufficient storage, we recommend that you cut out a region (a gene, for example) to continue.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="Mermaid Chart - Create complex, visual diagrams with text. A smarter way of creating diagrams.-2025-07-23-163425.svg" class="img-fluid figure-img" width="694"></p>
+<figcaption>Bioinformatics Pipeline</figcaption></figure>
+</div>
+<section id="basecalling" class="level3" data-number="3.4.1"><h3 data-number="3.4.1" class="anchored" data-anchor-id="basecalling">
+<span class="header-section-number">3.4.1</span> Basecalling</h3>
+<p>The first step is to convert the electrical signal stored in the POD5 files into the sequence bases. In nanopore this is performed by Dorado (<a href="https://github.com/nanoporetech/dorado" title="Github">Github</a>| <a href="https://dorado-docs.readthedocs.io/en/latest/" title="Documentation">Documentation</a>).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Download the pre-compiled release!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://github.com/nanoporetech/dorado/releases" class="uri">https://github.com/nanoporetech/dorado/releases</a></p>
+</div>
+</div>
+<section id="dorado-basecalling" class="level4" data-number="3.4.1.1"><h4 data-number="3.4.1.1" class="anchored" data-anchor-id="dorado-basecalling">
+<span class="header-section-number">3.4.1.1</span> Dorado basecalling</h4>
+<p>The Dorado basecalling command is:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dorado</span> basecaller hac pod5s/ <span class="op">&gt;</span> calls.bam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Where <code>hac</code> is the argument for the <strong><em>High Accuracy model</em></strong>, <code>pod5s/</code> the path for your POD5 files, and <code>calls.bam</code> is the unaligned BAM file. This command will save the output in your current directory. Although this command is sufficient to run the basecall, there are some additional arguments that you may find useful.</p>
+</section><section id="dorado-models" class="level4" data-number="3.4.1.2"><h4 data-number="3.4.1.2" class="anchored" data-anchor-id="dorado-models">
+<span class="header-section-number">3.4.1.2</span> Dorado models</h4>
+<p>Dorado can automatically select a basecalling model based on a chosen model speed (<code>fast</code>, <code>hac</code>, <code>sup</code>) and the POD5 data. If the model is not available locally, Dorado will automatically download it for use.</p>
+<p>Additionally, Dorado supports the use of model paths.</p>
+<p>To list the available models, run:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dorado</span> download <span class="at">--list</span> <span class="st">"all"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you wish and have the space, you can download all available templates. Otherwise, please specify the desired model. I recommend that you use the <code>--models-directory</code> argument so that you can control where the models will be stored.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#All models</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">dorado</span> download <span class="at">--model</span> all <span class="at">--models-directory</span> {PATH}</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Specific model</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">dorado</span> download <span class="at">--model</span> {MODEL} <span class="at">--models-directory</span> {PATH}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The naming of Dorado models is systematically structured; each segment corresponds to a different aspect of the model, including both chemistry and run settings. Below are some examples of the simplex basecalling models:</p>
+<p><code>dna_r10.4.1_e8.2_400bps_sup@v5.2.0</code></p>
+<p><code>rna004_130bps_hac@v5.2.0</code></p>
+<p>The structure of dorado models names is:</p>
+<div style="text-align: center;">
+<p><code>{analyte}_{pore}_{chemistry}_{speed}@version</code></p>
+</div>
+</section></section><section id="quality-control-qc" class="level3" data-number="3.4.2"><h3 data-number="3.4.2" class="anchored" data-anchor-id="quality-control-qc">
+<span class="header-section-number">3.4.2</span> Quality control (QC)</h3>
+</section><section id="genome-mapping" class="level3" data-number="3.4.3"><h3 data-number="3.4.3" class="anchored" data-anchor-id="genome-mapping">
+<span class="header-section-number">3.4.3</span> Genome Mapping</h3>
+</section><section id="variant-calling" class="level3" data-number="3.4.4"><h3 data-number="3.4.4" class="anchored" data-anchor-id="variant-calling">
+<span class="header-section-number">3.4.4</span> Variant calling</h3>
+</section><section id="base-modification-analysis" class="level3" data-number="3.4.5"><h3 data-number="3.4.5" class="anchored" data-anchor-id="base-modification-analysis">
+<span class="header-section-number">3.4.5</span> Base modification analysis</h3>
 
 
-<section id="this-page-is-under-construction" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="this-page-is-under-construction"><span class="header-section-number">2.1</span> This page is under construction</h2>
-
-
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-bowden2019" class="csl-entry" role="listitem">
+Bowden, Rory, Robert W. Davies, Andreas Heger, Alistair T. Pagnamenta, Mariateresa de Cesare, Laura E. Oikkonen, Duncan Parkes, et al. 2019. <span>“Sequencing of Human Genomes with Nanopore Technology.”</span> <em>Nature Communications</em> 10 (1). <a href="https://doi.org/10.1038/s41467-019-09637-5">https://doi.org/10.1038/s41467-019-09637-5</a>.
+</div>
+<div id="ref-delahaye2021" class="csl-entry" role="listitem">
+Delahaye, Clara, and Jacques Nicolas. 2021a. <span>“Sequencing DNA with Nanopores: Troubles and Biases.”</span> Edited by Eduardo Andrés-León. <em>PLOS ONE</em> 16 (10): e0257521. <a href="https://doi.org/10.1371/journal.pone.0257521">https://doi.org/10.1371/journal.pone.0257521</a>.
+</div>
+<div id="ref-delahaye2021a" class="csl-entry" role="listitem">
+———. 2021b. <span>“Sequencing DNA with Nanopores: Troubles and Biases.”</span> Edited by Eduardo Andrés-León. <em>PLOS ONE</em> 16 (10): e0257521. <a href="https://doi.org/10.1371/journal.pone.0257521">https://doi.org/10.1371/journal.pone.0257521</a>.
+</div>
+<div id="ref-ip2015" class="csl-entry" role="listitem">
+Ip, Camilla L. C., Matthew Loose, John R. Tyson, Mariateresa de Cesare, Bonnie L. Brown, Miten Jain, Richard M. Leggett, et al. 2015. <span>“MinION Analysis and Reference Consortium: Phase 1 Data Release and Analysis.”</span> <em>F1000Research</em> 4 (October): 1075. <a href="https://doi.org/10.12688/f1000research.7201.1">https://doi.org/10.12688/f1000research.7201.1</a>.
+</div>
+<div id="ref-Jain2018" class="csl-entry" role="listitem">
+Jain, Miten, Sergey Koren, Karen H Miga, Josh Quick, Arthur C Rand, Thomas A Sasani, John R Tyson, et al. 2018. <span>“Nanopore Sequencing and Assembly of a Human Genome with Ultra-Long Reads.”</span> <em>Nature Biotechnology</em> 36 (4): 338–45. <a href="https://doi.org/10.1038/nbt.4060">https://doi.org/10.1038/nbt.4060</a>.
+</div>
+<div id="ref-jain2016" class="csl-entry" role="listitem">
+Jain, Miten, Hugh E. Olsen, Benedict Paten, and Mark Akeson. 2016. <span>“The Oxford Nanopore MinION: Delivery of Nanopore Sequencing to the Genomics Community.”</span> <em>Genome Biology</em> 17 (1). <a href="https://doi.org/10.1186/s13059-016-1103-0">https://doi.org/10.1186/s13059-016-1103-0</a>.
+</div>
+<div id="ref-lin2021" class="csl-entry" role="listitem">
+Lin, Bo, Jianan Hui, and Hongju Mao. 2021. <span>“Nanopore Technology and Its Applications in Gene Sequencing.”</span> <em>Biosensors</em> 11 (7): 214. <a href="https://doi.org/10.3390/bios11070214">https://doi.org/10.3390/bios11070214</a>.
+</div>
+<div id="ref-marx2023" class="csl-entry" role="listitem">
+Marx, Vivien. 2023. <span>“Method of the Year: Long-Read Sequencing.”</span> <em>Nature Methods</em> 20 (1): 6–11. <a href="https://doi.org/10.1038/s41592-022-01730-w">https://doi.org/10.1038/s41592-022-01730-w</a>.
+</div>
+<div id="ref-tyson2017" class="csl-entry" role="listitem">
+Tyson, John R., Nigel J. O’Neil, Miten Jain, Hugh E. Olsen, Philip Hieter, and Terrance P. Snutch. 2017. <span>“MinION-Based Long-Read Sequencing and Assembly Extends the <span><em>Caenorhabditis Elegans</em></span> Reference Genome.”</span> <em>Genome Research</em> 28 (2): 266–74. <a href="https://doi.org/10.1101/gr.221184.117">https://doi.org/10.1101/gr.221184.117</a>.
+</div>
+<div id="ref-wan2022" class="csl-entry" role="listitem">
+Wan, Yuk Kei, Christopher Hendra, Ploy N. Pratanwanich, and Jonathan Göke. 2022. <span>“Beyond Sequencing: Machine Learning Algorithms Extract Biology Hidden in Nanopore Signal Data.”</span> <em>Trends in Genetics</em> 38 (3): 246–57. <a href="https://doi.org/10.1016/j.tig.2021.09.001">https://doi.org/10.1016/j.tig.2021.09.001</a>.
+</div>
+<div id="ref-wang2024" class="csl-entry" role="listitem">
+Wang, Jiaxu, Lin Yang, Anthony Cheng, Cheng-Yong Tham, Wenting Tan, Jefferson Darmawan, Paola Florez de Sessions, and Yue Wan. 2024. <span>“Direct RNA Sequencing Coupled with Adaptive Sampling Enriches RNAs of Interest in the Transcriptome.”</span> <em>Nature Communications</em> 15 (1). <a href="https://doi.org/10.1038/s41467-023-44656-3">https://doi.org/10.1038/s41467-023-44656-3</a>.
+</div>
+<div id="ref-wang2021" class="csl-entry" role="listitem">
+Wang, Yunhao, Yue Zhao, Audrey Bollas, Yuru Wang, and Kin Fai Au. 2021. <span>“Nanopore Sequencing Technology, Bioinformatics and Applications.”</span> <em>Nature Biotechnology</em> 39 (11): 1348–65. <a href="https://doi.org/10.1038/s41587-021-01108-x">https://doi.org/10.1038/s41587-021-01108-x</a>.
+</div>
+<div id="ref-workman2019" class="csl-entry" role="listitem">
+Workman, Rachael E., Alison D. Tang, Paul S. Tang, Miten Jain, John R. Tyson, Roham Razaghi, Philip C. Zuzarte, et al. 2019. <span>“Nanopore Native RNA Sequencing of a Human Poly(A) Transcriptome.”</span> <em>Nature Methods</em> 16 (12): 1297–1305. <a href="https://doi.org/10.1038/s41592-019-0617-2">https://doi.org/10.1038/s41592-019-0617-2</a>.
+</div>
+</div>
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -628,24 +850,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./sequencing_intro.html" class="pagination-link" aria-label="Sequencing">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Sequencing</span>
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./illumina.html" class="pagination-link" aria-label="Illumina">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Illumina</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./rpackages_intro.html" class="pagination-link" aria-label="R packages">
-        <span class="nav-page-text">R packages</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./rbase.html" class="pagination-link" aria-label="R base">
+        <span class="nav-page-text">R base</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
-<p>This book is Comics Lab initiative.</p>
+<p>This book is Marcel Ferreira initiative.</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
@@ -655,8 +874,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

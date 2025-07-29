@@ -1,0 +1,81 @@
+# Files
+
+::: callout-caution
+## This section is under construction
+:::
+
+## FASTA
+
+A FASTA file is a fundamental text-based format used in bioinformatics to store nucleotide sequences (DNA, RNA) or amino acid sequences (proteins). Named after the FASTA software package, this format has become the de facto standard for sequence data storage and exchange across virtually all biological databases and analysis tools.
+
+### Structure and Format
+
+FASTA files follow a simple two-line structure that alternates throughout the file. Each sequence entry begins with a header line starting with a greater-than symbol (\>) followed by a sequence identifier and optional description. The subsequent line(s) contain the actual sequence data using standard nucleotide codes (A, T, G, C for DNA; A, U, G, C for RNA) or amino acid single-letter codes for proteins.
+
+The header line serves as both a unique identifier and a place for metadata. It typically includes accession numbers, gene names, organism information, and functional annotations. Sequence data can span multiple lines, with most tools accepting various line lengths, though 60-80 characters per line is conventional for readability.
+
+### Common Applications
+
+FASTA files are ubiquitous in molecular biology and genomics research. They store reference genomes, gene sequences, protein sequences, and RNA transcripts. Researchers use them for sequence alignment tasks, phylogenetic analysis, primer design, and database searches using tools like BLAST. They're essential for storing assembled genomes, transcriptomes from RNA-seq experiments, and protein sequences from mass spectrometry or computational prediction.
+
+### Advantages and Versatility
+
+The format's human-readable nature allows for easy inspection and manual editing when necessary. Its simplicity enables straightforward parsing by programming languages and bioinformatics tools. FASTA files can represent sequences of any length, from short oligonucleotides to entire chromosomes, making them suitable for diverse applications from molecular cloning to whole-genome analysis.
+
+### File Variants and Extensions
+
+While the basic FASTA format is standardized, several variants exist for specific purposes. Multi-FASTA files contain multiple sequences in a single file, commonly used for gene families or whole proteomes. Compressed versions (.fa.gz, .fasta.gz) save storage space for large datasets. Some specialized formats like FASTQ extend FASTA by adding quality scores for sequencing data.
+
+### Database Integration
+
+Major biological databases including NCBI GenBank, UniProt, and Ensembl distribute their sequence data primarily in FASTA format. This standardization facilitates seamless data exchange between different research groups, software tools, and analysis pipelines, making FASTA files indispensable for computational biology workflows and collaborative research efforts.
+
+## FASTQ
+
+::: callout-caution
+## This section is under construction
+:::
+
+## BED
+
+A BED (Browser Extensible Data) file is a standard tab-delimited text format used in bioinformatics to define genomic regions and features. Originally developed for the UCSC Genome Browser, BED files have become widely adopted across genomic analysis tools and databases for representing coordinate-based genomic data.
+
+### Structure and Format
+
+BED files use a zero-based, half-open coordinate system where the start position is inclusive and the end position is exclusive. Each line represents a single genomic feature with tab-separated fields. The format supports both minimal 3-column entries and extended versions with up to 12 columns.
+
+The three required fields are:
+
+-   **chrom**: Chromosome name (e.g., chr1, chr2, chrX)
+
+-   **chromStart**: Start position of the feature (0-based)
+
+-   **chromEnd**: End position of the feature (exclusive)
+
+Optional fields include name, score, strand, thick start/end positions for coding regions, RGB color values, and block information for representing complex features like exons within genes.
+
+### Common Applications
+
+BED files serve numerous purposes in genomic research and analysis. They're frequently used to represent gene annotations, regulatory elements like promoters and enhancers, ChIP-seq peaks, DNA methylation sites, and copy number variations. Researchers also use them to define regions of interest for targeted sequencing, mark repetitive elements, and annotate structural variants.
+
+### Advantages and Compatibility
+
+The format's simplicity makes it human-readable and easy to parse programmatically. BED files are supported by virtually all major genomic visualization tools, including the UCSC Genome Browser, IGV, and Ensembl. They integrate seamlessly with command-line tools like BEDTools for performing set operations, intersections, and other genomic analyses.
+
+### File Variants
+
+Several specialized variants exist, including BED3 (minimal 3-column format), BED6 (includes name, score, and strand), and BED12 (full format with block structure). There's also bedGraph format for continuous-valued data and narrowPeak/broadPeak formats for ChIP-seq analysis results.
+
+The BED format's widespread adoption and versatility make it an essential file type for anyone working with genomic coordinate data, providing a standardized way to share and analyze positional information across different platforms and analysis pipelines.
+
+## SAM/BAM
+
+::: callout-caution
+## This section is under construction
+:::
+
+## VCF
+
+::: callout-caution
+## This section is under construction
+:::
