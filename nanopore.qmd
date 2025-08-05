@@ -36,7 +36,7 @@ Pay attention to the resources available on your system. POD5 files generated fr
 If you do not have sufficient storage, we recommend that you cut out a region (a gene, for example) to continue.
 :::
 
-![Bioinformatics Pipeline](Mermaid Chart - Create complex, visual diagrams with text. A smarter way of creating diagrams.-2025-07-23-163425.svg){fig-align="center" width="694"}
+![Bioinformatics Pipeline](Mermaid%20Chart%20-%20Create%20complex,%20visual%20diagrams%20with%20text.%20A%20smarter%20way%20of%20creating%20diagrams.-2025-07-23-163425.svg){fig-align="center" width="694"}
 
 ### Basecalling
 
@@ -58,6 +58,8 @@ dorado basecaller hac pod5s/ > calls.bam
 ```
 
 Where `hac` is the argument for the ***High Accuracy model***, `pod5s/` the path for your POD5 files, and `calls.bam` is the unaligned BAM file. This command will save the output in your current directory. Although this command is sufficient to run the basecall, there are some additional arguments that you may find useful.
+
+If you want the output in a fastq format you can use the `--emit-fastq` tag.
 
 #### Dorado models
 
@@ -97,7 +99,51 @@ The structure of dorado models names is:
 `{analyte}_{pore}_{chemistry}_{speed}@version`
 :::
 
+#### Modbase models
+
+`Dorado` can detect modified bases like 5-methylcytosine (5mC), 5-hydroxymethylcytosine (5hmC), and N6-methyladenosine (6mA), which are crucial in epigenetic regulation.
+
+To apply modifications, add a comma-separated list of modifications to the models argument. Refer to the Compatible Modifications column in the [DNA models from Dorado documentation table](https://github.com/nanoporetech/dorado#dna-models) to find available modifications that can be specified with the `--modified-bases` option.
+
+```{bash}
+#| eval: false
+
+# To performe detection of both 5mC/5hmC in CG contexts and 6mA in all contexts.
+dorado basecaller hac,5mCG_5hmCG,6mA pod5s/ > calls.bam
+
+# Using --modified-bases tag
+
+dorado basecaller hac --modified-bases 5mCG_5hmCG 6mA pod5s/ > calls.bam
+```
+
 ### Quality control (QC)
+
+#### Cramino for BAM quality analysis
+
+#### `NanoPlot`
+
+`NanoPlot` is a versatile tool for analyzing the quality of ONT sequencing data. It can be applied to fastq and bam files using the `--fastq` or `--bam` tag. The standard usage is:
+
+```{bash}
+#|eval: false
+
+#OUTPUT_DIR_NAME is the name of the output folder containing the results.
+NanoPlot -t {threads} {--fastq/--bam} {files} -o {OUTPUT_DIR_NAME}
+
+```
+
+#### Filter BAM with `samtools` + `awk`
+
+```{bash}
+#| eval: false
+
+#Filter for the min length=50, max length=300 and minmapq=30.
+samtools view -h input.bam | \
+awk 'BEGIN {minlen=50; maxlen=300; minmapq=30}
+     /^@/ {print; next}
+     ($5 >= minmapq) && (length($10) >= minlen) && (length($10) <= maxlen) {print}' | \
+samtools view -b -o output.filtered.bam
+```
 
 ### Genome Mapping
 

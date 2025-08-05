@@ -5,7 +5,7 @@
 <meta name="generator" content="quarto-1.6.39">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Marcel Ferreira">
-<meta name="dcterms.date" content="2025-07-29">
+<meta name="dcterms.date" content="2025-08-05">
 <title>3&nbsp; Nanopore sequencing – Material Book</title>
 <style>
 code{white-space: pre-wrap;}
@@ -273,7 +273,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 29, 2025</p>
+      <p class="date">August 5, 2025</p>
     </div>
   </div>
   
@@ -382,6 +382,18 @@ Download the pre-compiled release!
 <p>The structure of dorado models names is:</p>
 <div style="text-align: center;">
 <p><code>{analyte}_{pore}_{chemistry}_{speed}@version</code></p>
+</div>
+</section><section id="modbase-models" class="level4" data-number="3.4.1.3"><h4 data-number="3.4.1.3" class="anchored" data-anchor-id="modbase-models">
+<span class="header-section-number">3.4.1.3</span> Modbase models</h4>
+<p><code>Dorado</code> can detect modified bases like 5-methylcytosine (5mC), 5-hydroxymethylcytosine (5hmC), and N6-methyladenosine (6mA), which are crucial in epigenetic regulation.</p>
+<p>To apply modifications, add a comma-separated list of modifications to the models argument. Refer to the Compatible Modifications column in the <a href="https://github.com/nanoporetech/dorado#dna-models">DNA models from Dorado documentation table</a> to find available modifications that can be specified with the <code>--modified-bases</code> option.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To performe detection of both 5mC/5hmC in CG contexts and 6mA in all contexts.</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">dorado</span> basecaller hac,5mCG_5hmCG,6mA pod5s/ <span class="op">&gt;</span> calls.bam</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Using --modified-bases tag</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex">dorado</span> basecaller hac <span class="at">--modified-bases</span> 5mCG_5hmCG,6mA pod5s/ <span class="op">&gt;</span> calls.bam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section><section id="quality-control-qc" class="level3" data-number="3.4.2"><h3 data-number="3.4.2" class="anchored" data-anchor-id="quality-control-qc">
 <span class="header-section-number">3.4.2</span> Quality control (QC)</h3>
