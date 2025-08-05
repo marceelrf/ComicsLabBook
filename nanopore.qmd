@@ -132,6 +132,8 @@ NanoPlot -t {threads} {--fastq/--bam} {files} -o {OUTPUT_DIR_NAME}
 
 ```
 
+The `--ubam` tag is useful for analyzing data before genome mapping.
+
 #### Filter BAM with `samtools` + `awk`
 
 ```{bash}
