@@ -19,6 +19,10 @@ book:
     - index.qmd
     - intro.qmd
     
+    - part: math.qmd
+      chapters:
+      - derivatives.qmd
+    
     - part: sequencing_intro.qmd
       chapters:
       - illumina.qmd

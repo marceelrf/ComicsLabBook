@@ -125,7 +125,7 @@ dorado basecaller hac --modified-bases 5mCG_5hmCG 6mA pod5s/ > calls.bam
 `NanoPlot`[@coster2023] is a versatile tool for analyzing the quality of ONT sequencing data. It can be applied to fastq and bam files using the `--fastq` or `--bam` tag. The standard usage is:
 
 ```{bash}
-#|eval: false
+#| eval: false
 
 #OUTPUT_DIR_NAME is the name of the output folder containing the results.
 NanoPlot -t {threads} {--fastq/--bam} {files} -o {OUTPUT_DIR_NAME}
@@ -136,7 +136,7 @@ The `--ubam` tag is useful for analyzing data before genome mapping.
 
 #### Chopper
 
-If you are working with fastq files, `Chopper` [@coster2023a] is a great option. You can select the min quality (-q), min length (-l), and other interesting features. The standard usage is:
+If you are working with fastq files, `Chopper` [@coster2023a] is a great option. You can select the min quality (`-q`), min length (`-l`), and other interesting features. The standard usage is:
 
 ```{bash}
 #| eval: false
@@ -157,6 +157,22 @@ awk 'BEGIN {minlen=50; maxlen=300; minmapq=30}
      /^@/ {print; next}
      ($5 >= minmapq) && (length($10) >= minlen) && (length($10) <= maxlen) {print}' | \
 samtools view -b -o output.filtered.bam
+```
+
+#### Samtools
+
+```{bash}
+#| eval: false
+
+samtools view \
+    --threads 16 \
+    --bam --with-header \
+    --min-qlen 500 \
+    --min-MQ 10 \
+    --exclude-flags 260 \
+    --expr "avg(qual) >= 10 && qlen >= 500" \
+    {infile} > {outfile}
+
 ```
 
 ### Genome Mapping

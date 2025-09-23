@@ -1,0 +1,11 @@
+# Derivatives
+
+Table of derivatives:
+
+$$
+\begin{align}
+y(x) = x^n \Rightarrow \frac{dy}{dx} = nx^{n-1} \\
+y(x) = u(x) v(x) \Rightarrow \frac{dy}{dx} = \frac{du}{dx} v + u \frac{dv}{dx} \\
+y(x) = \frac{u(x)}{v(x)}  \Rightarrow \frac{dy}{dx} = \frac{\frac{du}{dx} v - u \frac{dv}{dx}}{v^2}
+\end{align}
+$$
